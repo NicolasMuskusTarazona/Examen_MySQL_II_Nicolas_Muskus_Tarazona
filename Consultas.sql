@@ -8,3 +8,8 @@ SELECT clientes.nombre,municipio.nombre,departamento.nombre,pais.nombre  FROM cl
 JOIN municipio ON clientes.municipioid = municipio.id
 JOIN departamento ON municipio.depid = departamento.id
 JOIN pais ON departamento.paisid = pais.id;
+
+-- 3. Obtener los nombres de los empleados cuyo puesto existe en más de una sucursal.
+
+SELECT empleados.nombre, empleados.puesto FROM empleados
+JOIN sucursal ON empleados.sucursalid = sucursal.id
