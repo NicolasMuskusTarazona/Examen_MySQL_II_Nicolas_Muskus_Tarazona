@@ -66,7 +66,6 @@ CREATE TABLE `clientes` (
     `fecha_registro` date DEFAULT NULL,
     `municipioid` INT DEFAULT NULL,
     PRIMARY KEY (`cliente_id`),
-    UNIQUE KEY `email` (`email`),
     FOREIGN KEY (`municipioid`) REFERENCES `municipio`(`id`)
 );
 
