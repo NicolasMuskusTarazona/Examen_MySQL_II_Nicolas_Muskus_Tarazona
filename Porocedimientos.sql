@@ -22,3 +22,21 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+-- 2. Cree un procedimiento por nombre `ps_obtener_clientes_por_municipio` 
+-- donde liste todos los clientes de un municipio .
+
+DELIMITER $$
+
+CREATE PROCEDURE ps_obtener_clientes_por_municipio (
+    IN p_municipio_id INT
+)
+BEGIN
+    SELECT *
+    FROM clientes
+    WHERE municipioid = p_municipio_id;
+END$$
+
+DELIMITER ;
+
+CALL ps_obtener_clientes_por_municipio(1);
