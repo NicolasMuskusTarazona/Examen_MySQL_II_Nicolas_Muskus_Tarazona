@@ -18,3 +18,8 @@ JOIN sucursal ON empleados.sucursalid = sucursal.id
 
 SELECT municipio.nombre, departamento.nombre FROM municipio
 JOIN departamento ON municipio.depid = departamento.id;
+
+-- 5. Mostrar todos los municipios con sucursales activas (que tengan al menos un empleado).
+
+SELECT municipio.nombre FROM municipio 
+JOIN sucursal ON municipio.id = sucursal.municipioid
