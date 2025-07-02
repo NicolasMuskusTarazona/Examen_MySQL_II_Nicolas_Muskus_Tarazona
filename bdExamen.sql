@@ -129,6 +129,6 @@ CREATE TABLE `detalles_pedidos` (
     PRIMARY KEY (`detalle_id`),
     KEY `pedido_id` (`pedido_id`),
     KEY `detalles_pedidos_producto_suc_FK` (`producto_id`,`sucid`),
-    FOREIGN KEY (`pedido_id`) REFERENCES `pedidos` (`pedido_id`),
+    FOREIGN KEY (`pedido_id`) REFERENCES `pedidos` (`pedido_id`) ,
     FOREIGN KEY (`producto_id`, `sucid`) REFERENCES `producto_suc` (`productoid`, `sucursalid`)
 );
