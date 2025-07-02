@@ -13,3 +13,8 @@ JOIN pais ON departamento.paisid = pais.id;
 
 SELECT empleados.nombre, empleados.puesto FROM empleados
 JOIN sucursal ON empleados.sucursalid = sucursal.id
+
+-- 4. Mostrar el total de empleados por municipio y el nombre del departamento al que pertenecen.
+
+SELECT municipio.nombre, departamento.nombre FROM municipio
+JOIN departamento ON municipio.depid = departamento.id;
