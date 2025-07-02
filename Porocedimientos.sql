@@ -40,3 +40,20 @@ END$$
 DELIMITER ;
 
 CALL ps_obtener_clientes_por_municipio(1);
+
+-- 3. Cree un procedimiento por nombre  `ps_listar_empleados_por_sucursal` 
+-- donde muestre todos los empleados de una sucursal .
+DELIMITER $$
+
+CREATE PROCEDURE ps_listar_empleados_por_sucursal (
+    IN p_sucursal_id INT
+)
+BEGIN
+    SELECT *
+    FROM empleados
+    WHERE sucursalid = p_sucursal_id;
+END$$
+
+DELIMITER ;
+
+CALL ps_listar_empleados_por_sucursal(1);
